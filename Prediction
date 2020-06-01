@@ -1,0 +1,10 @@
+# Write the index of the test sample to test
+prediction = model.predict(x_test[88:89])
+prediction = prediction[0]
+print('Prediction\n',prediction)
+print('\nThresholded output\n',(prediction>0.5)*1)
+sum(prediction)
+# Write the index of the test sample to show
+plt.imshow(x_test[88:89].reshape(28,28),cmap='gray')
+plt.show()
+print(y_test[88:89])
