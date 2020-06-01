@@ -1,0 +1,11 @@
+import warnings
+warnings.filterwarnings('ignore')
+
+import numpy as np
+import matplotlib.pyplot as plt
+import keras
+from keras.datasets import mnist
+from keras.models import Sequential,model_from_json
+from keras.layers import Dense
+from keras.optimizers import RMSprop
+import pylab as plt
