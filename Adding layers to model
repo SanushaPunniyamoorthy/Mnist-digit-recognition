@@ -1,0 +1,8 @@
+first_layer_size = 32
+model = Sequential()
+model.add(Dense(first_layer_size, activation='sigmoid', input_shape=(784,)))
+model.add(Dense(32, activation='sigmoid'))
+model.add(Dense(32, activation='sigmoid'))
+model.add(Dense(num_classes, activation='softmax'))
+
+model.summary()
