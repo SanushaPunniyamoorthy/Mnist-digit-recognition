@@ -1,0 +1,15 @@
+w = []
+for layer in model.layers:
+    weights = layer.get_weights()
+    w.append(weights)
+
+layer1 = np.array(w[0][0])
+print("Shape of First Layer",layer1.shape)
+print("Visualization of First Layer")
+fig=plt.figure(figsize=(12, 12))
+columns = 8
+rows = int(first_layer_size/8)
+for i in range(1, columns*rows +1):
+    fig.add_subplot(rows, columns, i)
+    plt.imshow(layer1[:,i-1].reshape(28,28),cmap='gray')
+plt.show()
