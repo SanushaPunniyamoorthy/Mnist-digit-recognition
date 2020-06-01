@@ -1,0 +1,14 @@
+model.compile(loss='categorical_crossentropy',
+              optimizer=RMSprop(),
+              metrics=['accuracy'])
+              
+# Write the Training input and output variables, size of the batch, number of epochs
+history = model.fit(x_train,y_train,
+                    batch_size=batch_size,
+                    epochs=epochs,
+                    verbose=1)
+                    
+# Write the testing input and output variables
+score = model.evaluate(x_test, y_test, verbose=0)
+print('Test loss:', score[0])
+print('Test accuracy:', score[1])                    
